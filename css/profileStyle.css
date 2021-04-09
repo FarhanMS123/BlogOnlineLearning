@@ -96,6 +96,10 @@ body{
     padding-right: 10px;
 }
 
+.user-edit:hover{
+    background-color: #C0C0C0;
+}
+
 hr{
     margin: auto;
     width: 90%;
@@ -135,10 +139,16 @@ hr{
 }
 
 .editBio{
+    border: none;
     margin-top: 30px;
     background-color: #7FFFE0;
     float: right;
     margin-right: 4.4%;
     width: 120px;
     height: 50px;
+    transition: 0.1s;
+}
+
+.editBio:hover{
+    background-color: #C0C0C0;
 }
