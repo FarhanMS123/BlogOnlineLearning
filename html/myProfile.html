@@ -11,27 +11,60 @@
 </head>
 <body>
     <section id="box">
-        <div class="part1">
-            <div class="imagebox">
-                <img src="../assets/myProfile/user_image.png" alt="">
-            </div>
-            <div class="contents">
-                <h1>Name</h1>
-                <input type="text" placeholder="Type your description here">
-            </div>
-        </div>
-        <div class="part2">
-            <div class="usercontenttop">
-                <div class="leftcontent">
-                    <h1>Username</h1>
-                    <h1>Nama Orang</h1>
+        <form action="">
+            <div class="part1">
+                <div class="imagebox">
+                    <img src="../assets/myProfile/user_image.png" alt="">
                 </div>
-                <div class="rightcontent">
-                    <h1>Place of Birth</h1>
-                    <h1>Jakarta, Indonesia</h1>
+                <div class="contents">
+                    <h1>[Sample Name]</h1>
+                    <input type="text" placeholder="Type your description here">
                 </div>
             </div>
-        </div>
+            <div class="part2">
+                <div class="usercontent">
+                    <div class="leftcontent">
+                        <table>
+                            <tr class="left-top">
+                                <td class="userview">Username</td>
+                                <td class="userinput">[Sample Username]</td>
+                            </tr>
+                            <tr class="left-down">
+                                <td class="userview">Email</td>
+                                <td class="userinput">[sample@email.com]</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="rightcontent">
+                        <table>
+                            <tr class="right-top">
+                                <td class="userview">Place of Birth</td>
+                                <td class="userinput">[sample city, sample country]</td>
+                            </tr>
+                            <tr class="right-down">
+                                <td class="userview">Date of Birth</td>
+                                <td class="userinput">[DD/BB/YYYY]</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <button class="user-edit" type="submit">
+                    <img class="user-edit" src="../assets/myProfile/edit_icon.png" alt="">
+                </button>
+            </div>
+            <hr>
+            <div class="part3">
+                <div class="psw">
+                    <label for="">Password</label>
+                    <input type="password" minlength="5" placeholder="Type your password here">
+                </div>
+                <div class="cpsw">
+                    <label for="">Confirm Password</label>
+                    <input type="password" minlength="5" placeholder="Confirm your password here">
+                </div>
+            </div>
+            <button type="submit" class="editBio">Edit Bio</button>
+    </form>
     </section>
 </body>
 </html>
