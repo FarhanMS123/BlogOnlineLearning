@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto';
+}
+
+body{
+    background-color: #F0F0F0;
+}
+
+#box{
+    background-color: #ffffff;
+    margin: 3% 2.5%;
+    height: 85vh;
+    box-shadow: 0px 0px 8px #C0C0C0;
+}
+
+.part1{
+    display: flex;
+    padding: 2.1% 3%;
+    align-items: center;
+}
+
+.imagebox{
+    padding: 2%;
+    background-color: #C4C4C4;
+    border-radius: 100px;
+    width: 12%;
+    height: 12%;
+}
+
+.contents{
+    padding-left: 6%;
+}
+
+.contents h1{
+    font-size: 35px;
+}
+
+.contents input{
+    width: 193%;
+    height: 6vh;
+    text-indent: 2.5%;
+    border-radius: 5px;
+}
+
+.contents input::placeholder{
+    color: #E21212;
+    font-weight: 3;
+}
+
+.part2{
+    padding-bottom: 30px;
+}
+
+.part2, .usercontent{
+    display: flex;
+}
+
+.leftcontent, .rightcontent{
+    padding: 0 68px;
+    /* border: 1px solid black; */
+}
+
+.leftcontent table, .rightcontent table{
+    width: 150%;
+    font-size: 22px;
+}
+
+.userview{
+    font-weight: bold;
+}
+
+.userinput{
+    font-weight: lighter;
+}
+
+.left-down td, .right-down td{
+    padding-top: 15px;
+}
+
+.user-edit{
+    background-color: #7FFFE0;
+    border-radius: 100px;
+    width: 75px;
+    height: 75px;
+    /* margin-left: 14%; */
+    align-items: center;
+    border: none;
+}
+
+button.user-edit{
+    margin-left: 5em;
+}
+
+.user-edit img{
+    width: 50px;
+    height: 50px;
+    /* padding-right: 10px; */
+    /* background-color: transparent !important; */
+}
+
+.user-edit:hover{
+    background-color: #C0C0C0;
+}
+
+hr{
+    margin: auto;
+    width: 90%;
+    border: 1px solid #000000;
+}
+.part3{
+    padding: 30px 68px 0 68px;
+}
+
+.cpsw{
+    padding-top: 20px;
+}
+
+.psw label, .cpsw label{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.psw label{
+    padding-right: 93px;
+}
+
+.cpsw label{
+    padding-right: 7.7px;
+}
+
+.psw input, .cpsw input{
+    width: 39.5%;
+    height: 6vh;
+    text-indent: 2.5%;
+    border-radius: 5px;
+}
+
+.part3 input::placeholder{
+    color: #E21212;
+    font-weight: 3;
+}
+
+.editBio{
+    border: none;
+    margin-top: 30px;
+    background-color: #7FFFE0;
+    float: right;
+    margin-right: 4.4%;
+    width: 120px;
+    height: 50px;
+    transition: 0.1s;
+}
+
+.editBio:hover{
+    background-color: #C0C0C0;
+}
