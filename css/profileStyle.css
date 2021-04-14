@@ -23,26 +23,29 @@ body{
 }
 
 .imagebox{
-    padding: 2%;
     background-color: #C4C4C4;
     border-radius: 100px;
-    width: 12%;
-    height: 12%;
+    width: 8.8em;
+    height: 8.8em;
 }
 
 .contents{
-    padding-left: 6%;
+    padding-left: 5em;
 }
 
 .contents h1{
     font-size: 35px;
 }
 
+.ctop{
+    display: flex;
+}
+
 .contents input{
     width: 193%;
     height: 6vh;
-    text-indent: 2.5%;
     border-radius: 5px;
+    border: 1px solid black;
 }
 
 .contents input::placeholder{
@@ -60,7 +63,6 @@ body{
 
 .leftcontent, .rightcontent{
     padding: 0 68px;
-    /* border: 1px solid black; */
 }
 
 .leftcontent table, .rightcontent table{
@@ -90,32 +92,23 @@ body{
     border: none;
 }
 
-button.user-edit{
-    margin-left: 5em;
-}
-
-.user-edit img{
-    width: 50px;
-    height: 50px;
-    /* padding-right: 10px; */
-    /* background-color: transparent !important; */
-}
-
-.user-edit:hover{
-    background-color: #C0C0C0;
-}
-
 hr{
     margin: auto;
     width: 90%;
     border: 1px solid #000000;
 }
+
 .part3{
     padding: 30px 68px 0 68px;
 }
 
+.psw{
+    display: flex;
+}
+
 .cpsw{
-    padding-top: 20px;
+    padding-top: 1.7%;
+    display: flex;
 }
 
 .psw label, .cpsw label{
@@ -124,18 +117,18 @@ hr{
 }
 
 .psw label{
-    padding-right: 93px;
+    padding-right: 4.36em;
 }
 
 .cpsw label{
-    padding-right: 7.7px;
+    padding-right: 0.5em;
 }
 
 .psw input, .cpsw input{
     width: 39.5%;
     height: 6vh;
-    text-indent: 2.5%;
     border-radius: 5px;
+    border: 1px solid black;
 }
 
 .part3 input::placeholder{
@@ -143,17 +136,35 @@ hr{
     font-weight: 3;
 }
 
+.btns{
+    margin-top: 2em;
+    padding-right: 2.4em;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.btns a{
+    text-decoration: none;
+    color: #FF0000;
+    font-size: 27px;
+    padding-right: 1.5em;
+}
+
+.btns a:hover{
+    color: #8b0000;
+}
+
 .editBio{
     border: none;
-    margin-top: 30px;
     background-color: #7FFFE0;
-    float: right;
     margin-right: 4.4%;
     width: 120px;
     height: 50px;
-    transition: 0.1s;
+    transition: 0.3s;
+    font-size: 27px;
 }
 
 .editBio:hover{
-    background-color: #C0C0C0;
+    background-color: #00FFFF;
 }
