@@ -12,6 +12,12 @@
     padding-left: 2em;
 }
 
+.d-flex input::placeholder{
+    color: #000000;
+    font-weight: 100;
+    opacity: 50%;
+}
+
 .form-control{
     width: 20em;
 }
@@ -69,4 +75,34 @@
 
 .droppudown:hover .dropimg{
     filter: blur(0.1em);
+}
+
+.pickbtn{
+    display: flex;
+    padding: 0.3em 3em;
+}
+
+.right{
+    margin-left: 1em;
+}
+
+.ubtn{
+    font-size: 21px;
+    width: 8em;
+    height: 2.5em;
+    border: none;
+    font-weight: bold;
+}
+
+.right .ubtn{
+    color: #989090;
+}
+
+.content{
+    margin: 1.5em 3em;
+    background-color: red;
+    width: 92.5vw;
+    height: 67.5vh;
+    overflow: hidden;
+    overflow-y: scroll;
 }
