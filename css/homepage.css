@@ -5,7 +5,8 @@
   font-family: "roboto";
 }
 
-html,body {
+html,
+body {
   width: 100vw;
   min-height: 100vh;
 }
@@ -36,7 +37,7 @@ body {
   border-radius: 5px 0px 0px 5px !important;
 }
 
-#search-icon{
+#search-icon {
   border-radius: 0px 5px 5px 0px !important;
 }
 
@@ -52,15 +53,16 @@ body {
   display: block;
   padding-right: 2em !important;
   text-decoration: none;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
   color: black !important;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: black !important;
 }
 
-.fas:hover{
+.fas:hover {
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -79,46 +81,84 @@ body {
   text-align: center !important;
 }
 
-.hp-section{
+.hp-section {
   padding: 2em;
 }
 
-.post-content{
+.post-content {
   display: block;
   background-color: white;
   /* margin: 0em 24em 0em 5em; */
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
   padding: 1.5em 0em 1.5em 1.5em;
   /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.07); */
-  border-radius: 5px;
+  border-radius: 5px 5px 0px 0px;
 }
 
-.post-text{
+.post-text {
   color: #c3c6ca;
 }
 
-#article-dummy{
+#article-dummy {
   /* margin: 2em 24em 0em 5em; */
-  background: #FFFFFF;
+  margin-top: 2em;
+  background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   border-radius: 5px;
 }
 
-#card-title{
+#card-title {
   padding: 0em 2em 0em 1em;
-  font-size:xx-large;
+  font-size: xx-large;
   font-weight: 1200;
   text-align: justify;
 }
 
-#card-text{
+#card-text {
   padding: 2em;
   padding-top: 0em;
   padding-bottom: 1em;
   text-align: justify;
 }
 
-.top-article-text{
+#popup-post-content {
+  /* margin-bottom: 2em; */
+  border-radius: 0px 0px 5px 5px;
+}
+
+.top-article-text {
   padding-bottom: 1em;
+}
+
+.input-article-title {
+  border: 0em;
+  margin: 1em;
+  margin-bottom: 0em;
+  width: 41.5em;
+  height: 3em;
+}
+
+.input-article-body {
+  border: 0em;
+  margin: 1em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  width: 41.5em;
+  height: 3em;
+  resize: none;
+}
+
+.post-article-font-edit {
+  margin: 1em;
+  height: 1em;
+}
+
+#bold,
+#italic,
+#highlighter,
+#input-image {
+  margin: 0.5em;
+  margin-bottom: 0em;
+  margin-top: 0em;
 }
