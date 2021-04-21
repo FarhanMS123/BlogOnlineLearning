@@ -1,40 +1,119 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'roboto';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto";
 }
 
-body{
-    background-color: #f5f5f5 !important;
+html,body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #f5f5f5 !important;
 }
 
 /* .navbar {
     
 } */
 
-.navbar-brand{
-    margin: 0.2em !important;
-    padding: 0.1em !important;
+.navbar-brand {
+  margin: 0.2em !important;
+  padding: 0.1em !important;
 }
 
-.img-logo{
-    block-size: 7.5em;
+.img-logo {
+  block-size: 7.5em;
 }
 
-.d-flex{
-    padding-left: 15em;
+.d-flex {
+  padding-left: 15em;
 }
 
-.form-control{
-    width: 25em !important;
-    border-radius: 0px !important;
+.form-control {
+  width: 25em !important;
+  border-radius: 5px 0px 0px 5px !important;
 }
 
-.btn{
-    width: 3em;
-    border: 1px solid #d1d6dc !important;
-    border-left: 0px solid !important;
-    border-radius: 0px !important;
-    background-color: #ffffff !important;
+#search-icon{
+  border-radius: 0px 5px 5px 0px !important;
+}
+
+.btn {
+  width: 3em;
+  border: 1px solid #d1d6dc !important;
+  border-left: 0px solid !important;
+  border-radius: 0px !important;
+  background-color: #ffffff !important;
+}
+
+.nav-link {
+  display: block;
+  padding-right: 2em !important;
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  color: black !important;
+}
+
+.nav-link:hover{
+  color: black !important;
+}
+
+.fas:hover{
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition-duration: 0.7s;
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: 1.25em !important;
+}
+
+.dropdown-menu {
+  min-width: 0em !important;
+  background-color: #f5f5f5 !important;
+  background-clip: none !important;
+  border: 0px !important;
+  text-align: center !important;
+}
+
+.hp-section{
+  padding: 2em;
+}
+
+.post-content{
+  display: block;
+  background-color: white;
+  margin: 0em 24em 0em 5em;
+  padding: 1.5em 0em 1.5em 1.5em;
+  /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.07); */
+  border-radius: 5px;
+}
+
+.post-text{
+  color: #c3c6ca;
+}
+
+#article-dummy{
+  margin: 2em 24em 0em 5em;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#card-title{
+  padding: 0em 2em 0em 1em;
+  font-size:xx-large;
+  font-weight: 1200;
+  text-align: justify;
+}
+
+#card-text{
+  padding: 2em;
+  padding-top: 0em;
+  padding-bottom: 1em;
+  text-align: justify;
 }
