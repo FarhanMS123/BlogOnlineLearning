@@ -15,18 +15,19 @@
         <nav class="navbar navbar-light">
             <div class="container-fluid">
               <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search here" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control" type="search" placeholder="Search here" aria-label="Search">
+                <button id="search-icon" class="btn" type="submit"><i class="fas fa-search"></i></button>
               </form>
               <div class="content-nav">
                 <label id="greetings"></label>
                 <div class="droppudown">
-                    <i class="fas fa-user-circle fa-4x"></i>
+                    <i class="fas fa-user-circle fa-4x" id="user-icon"></i>
+                    <label for="user-icon"><i class="fas fa-caret-down"></i></label>
                     <div class="dropdown-content">
                         <a href="../html/myProfile.html">My Profile</a>
                         <a href="#">Admin</a>
                         <hr>
-                        <a href="./index.html">Logout</a>
+                        <a href="#">Logout</a>
                     </div>
                 </div>
             </div>
