@@ -18,7 +18,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script src="../js/homepage.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 
   <title>Vasa Doctrina</title>
 </head>
@@ -46,7 +48,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false"><i class="fas fa-user-circle fa-3x"></i>
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="./myProfile.html">My Profile</a></li>
             <li><a class="dropdown-item" href="./myAdmin.html">Admin</a></li>
             <li>
@@ -66,11 +68,13 @@
         <div id="post-content" class="post-content shadow-sm">
           <h1 class="post-text">Post a content...</h1>
         </div>
-        <div id="popup-post-content" class="card shadow-sm">
+        <div id="popup-post-content" class="card shadow">
+          <div id="header-cancel-post" class="card-header clearfix">
+            <button id="cancel-post-article" class="border-0"><i class="fas fa-times-circle"></i></button>
+          </div>
           <form action="">
             <div class=" post-article-title">
               <input class="input-article-title" type="text" placeholder="Your article title...">
-              <i class="fas fa-play"></i>
             </div>
             <hr class="divider">
             <div class="post-article-body">
@@ -83,51 +87,57 @@
               <i id="italic" class="fas fa-italic"></i>
               <i id="highlighter" class="fas fa-highlighter"></i>
               <i id="input-image" class="fas fa-images"></i>
+              <!-- <i id="submit-button" class="fas fa-play"></i> -->
+              <button id="submit-button" class="border-0"><span class="material-icons">send</span></button>
             </div>
           </form>
         </div>
-        <div id="article-dummy" class="card shadow-sm">
-          <img src="https://cinemags.co.id/wp-content/uploads/2020/12/The-Falcon-and-the-Winter-Soldier.jpg"
-            class="card-img-top" alt="">
-          <div class="card-body">
-            <p id="card-title" class="card-title">The Falcon and the Winter Soldier</p>
-            <p id="card-text" class="card-text">eu volutpat odio facilisis mauris sit amet massa vitae tortor
-              condimentum lacinia quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue
-              lacus viverra vitae congue eu consequat ac felis donec et odio pellentesque diam volutpat commodo sed
-              egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec
-              sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales
-              ut eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed
-              risus ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus metus</p>
+        <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+          <div id="article-dummy" class="card shadow-sm">
+            <img src="https://cinemags.co.id/wp-content/uploads/2020/12/The-Falcon-and-the-Winter-Soldier.jpg"
+              class="card-img-top" alt="">
+            <div class="card-body">
+              <p id="card-title" class="card-title">The Falcon and the Winter Soldier</p>
+              <p id="card-text" class="card-text">eu volutpat odio facilisis mauris sit amet massa vitae tortor
+                condimentum lacinia quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue
+                lacus viverra vitae congue eu consequat ac felis donec et odio pellentesque diam volutpat commodo sed
+                egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec
+                sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim
+                sodales
+                ut eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed
+                risus ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus metus</p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
-      <div id="top-article-box" class="col-4">
+      <div class="col-4">
         <div class="card">
-          <div class="card-body">
+          <div id="top-article-box" class="card-body">
             <h1 class="top-article-text">Top Article</h1>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)"><p>The Falcon and the Winter Soldier</p></a>
           </div>
         </div>
       </div>
     </div>
     </div>
   </section>
+  <script src="../js/homepage.js"></script>
 </body>
 
 </html>

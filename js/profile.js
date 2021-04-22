@@ -21,7 +21,7 @@ function checkPass(){
         form.addEventListener('submit', function (event) {
           if (!form.checkValidity() && checkPass() != 0) {
             event.preventDefault()
-            event.stopPropagation()
+            // event.stopPropagation()
           }
   
           form.classList.add('was-validated')
