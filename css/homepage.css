@@ -72,6 +72,19 @@ body {
   cursor: pointer;
 }
 
+.myArticles{
+  border-radius: 10px;
+  margin-right: 2em;
+  border: none;
+  background-color: rgba(127, 255, 224, 1);
+  width: 7em;
+  height: 3em;
+}
+
+.myArticles:hover{
+  background-color: rgb(112, 223, 195);
+}
+
 /* .material-icons:hover {
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -85,6 +98,7 @@ body {
 
 .login-register{
   margin: 1em 4em 1em 1em;
+  display: block;
 }
 
 .login, .register{
