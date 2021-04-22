@@ -25,4 +25,8 @@ class IndexController extends Controller
     public function editPost(Request $request){
         //
     }
+
+    public function uploadPhoto(Request $request){
+        //
+    }
 }

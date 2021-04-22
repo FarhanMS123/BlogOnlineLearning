@@ -11,6 +11,8 @@ class AdminController extends Controller
     }
 
     public function banUser(Request $request){
-        //
+        $request->validate([
+            "file"=>[""]
+        ]);
     }
 }

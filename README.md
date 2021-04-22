@@ -2,6 +2,8 @@
 
 This readme is created to describe Vasa Doctrina and how to setting it up. For laravel license, please see [this link](./laravel.md).
 
+This branch are used for Backend, if you are looking for frontend HTML, please select the `Frontend` branch or [click this](./tree/Frontend).
+
 ## Entity Relationship Diagram
 > There is nothing to see here.
 
