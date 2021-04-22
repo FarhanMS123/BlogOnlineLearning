@@ -18,13 +18,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      $("#post-content").click(function () {
-        $("#popup-post-content").toggle();
-      });
-    });
-  </script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
   <title>Vasa Doctrina</title>
 </head>
@@ -47,20 +42,120 @@
             <button id="search-icon" class="btn" type="submit"><i class="fas fa-search"></i></button>
           </form>
         </ul>
-        <ul class="username">Name</ul>
-        <ul class="nav-item-profile dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false"><i class="fas fa-user-circle fa-3x"></i>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="./myProfile.html">My Profile</a></li>
-            <li><a class="dropdown-item" href="./myAdmin.html">Admin</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="./index.html">Logout</a></li>
-          </ul>
-        </ul>
+        <div class="login-register">
+          <button class="login border-0" data-bs-toggle="modal" data-bs-target="#login-modal">Login</button>
+
+          <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="login-content" class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form class="change-form needs-validation" novalidate>
+                    <div class="mb-2">
+                      <label for="recipient-name" class="col-form-label">Username</label>
+                      <input class="form-control" id="login-username" type="text" minlength="5" placeholder="Username"
+                        required>
+                    </div>
+                    <div class="mb-2">
+                      <label for="message-text" class="col-form-label">Password</label>
+                      <input class="form-control" id="login-password" type="password" minlength="5"
+                        placeholder="Password" required>
+                    </div>
+                    <div class="mb-2">
+                      <input type="checkbox" name="" id="remember-me">
+                      <label id="remember-me-text" for="remember-me">Remember Me</label>
+                    </div>
+                  </form>
+                </div>
+                <div id="login-submit" class="modal-footer">
+                  <button class="login-submit-button" type="submit">Login</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="register border-0" data-bs-toggle="modal" data-bs-target="#register-modal">Register</button>
+
+          <div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div id="register-content" class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form class="change-form needs-validation w-100" novalidate>
+                    <div class="row w-100">
+                      <div class="col-6">
+                        <div class="mb-2">
+                          <label for="recipient-name" class="col-form-label">Username</label>
+                          <input class="form-control w-100" id="login-username" type="text" minlength="5"
+                            placeholder="Username" required>
+                        </div>
+                        <div class="mb-2">
+                          <label for="recipient-name" class="col-form-label">Email</label>
+                          <input class="form-control w-100" id="login-username" type="text" minlength="5"
+                            placeholder="Username" required>
+                        </div>
+                        <div class="mb-2">
+                          <label for="recipient-name" class="col-form-label">Place of Birth</label>
+                          <input class="form-control w-100" id="login-username" type="text" minlength="5"
+                            placeholder="Username" required>
+                        </div>
+                        <div class="mb-2">
+                          <label for="recipient-name" class="col-form-label">Date of Birth</label>
+                          <input class="form-control w-100" id="login-username" type="text" minlength="5"
+                            placeholder="Username" required>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="mb-2">
+                          <label for="message-text" class="col-form-label">Password</label>
+                          <input class="form-control w-100" id="login-password" type="password" minlength="5"
+                            placeholder="Password" required>
+                        </div>
+                        <div class="mb-2">
+                          <label for="message-text" class="col-form-label">Confirm Password</label>
+                          <input class="form-control w-100" id="login-password" type="password" minlength="5"
+                            placeholder="Password" required>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div id="register-submit" class="modal-footer">
+                  <button class="register-submit-button" type="submit">Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="after-login1">
+          <!-- buat display none -->
+          <div class="after-login2">
+            <!-- buat display flex belum tau cara biar rapih gmna kl ga pake 2 div walaupun kotor -->
+            <label class="username" for="">Name</label>
+            <ul class="nav-item-profile dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false"><i class="fas fa-user-circle fa-3x"></i>
+              </a>
+              <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="./myProfile.html">My Profile</a></li>
+                <li><a class="dropdown-item" href="./myAdmin.html">Admin</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./index.html">Logout</a></li>
+              </ul>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -72,11 +167,13 @@
         <div id="post-content" class="post-content shadow-sm">
           <h1 class="post-text">Post a content...</h1>
         </div>
-        <div id="popup-post-content" class="card shadow-sm">
+        <div id="popup-post-content" class="card shadow">
+          <div id="header-cancel-post" class="card-header clearfix">
+            <button id="cancel-post-article" class="border-0"><i class="fas fa-times-circle"></i></button>
+          </div>
           <form action="">
             <div class=" post-article-title">
               <input class="input-article-title" type="text" placeholder="Your article title...">
-              <i class="fas fa-play"></i>
             </div>
             <hr class="divider">
             <div class="post-article-body">
@@ -89,51 +186,145 @@
               <i id="italic" class="fas fa-italic"></i>
               <i id="highlighter" class="fas fa-highlighter"></i>
               <i id="input-image" class="fas fa-images"></i>
+              <!-- <i id="submit-button" class="fas fa-play"></i> -->
+              <button id="submit-button" class="border-0"><span class="material-icons">send</span></button>
             </div>
           </form>
         </div>
-        <div id="article-dummy" class="card shadow-sm">
-          <img src="https://cinemags.co.id/wp-content/uploads/2020/12/The-Falcon-and-the-Winter-Soldier.jpg"
-            class="card-img-top" alt="">
-          <div class="card-body">
-            <p id="card-title" class="card-title">The Falcon and the Winter Soldier</p>
-            <p id="card-text" class="card-text">eu volutpat odio facilisis mauris sit amet massa vitae tortor
-              condimentum lacinia quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue
-              lacus viverra vitae congue eu consequat ac felis donec et odio pellentesque diam volutpat commodo sed
-              egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec
-              sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales
-              ut eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed
-              risus ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus metus</p>
+        <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+          <div id="article-dummy" class="card shadow-sm">
+            <img src="https://cinemags.co.id/wp-content/uploads/2020/12/The-Falcon-and-the-Winter-Soldier.jpg"
+              class="card-img-top" alt="">
+            <div class="card-body">
+              <p id="card-title" class="card-title">The Falcon and the Winter Soldier</p>
+              <p id="card-text" class="card-text">eu volutpat odio facilisis mauris sit amet massa vitae tortor
+                condimentum lacinia quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue
+                lacus viverra vitae congue eu consequat ac felis donec et odio pellentesque diam volutpat commodo sed
+                egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec
+                sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim
+                sodales
+                ut eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed
+                risus ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus metus</p>
+            </div>
           </div>
-        </div>
+        </a>
+
+        <!-- copyan article dummy-->
+
+        <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+          <div id="article-dummy" class="card shadow-sm">
+            <img src="https://cinemags.co.id/wp-content/uploads/2020/12/The-Falcon-and-the-Winter-Soldier.jpg"
+              class="card-img-top" alt="">
+            <div class="card-body">
+              <p id="card-title" class="card-title">The Falcon and the Winter Soldier</p>
+              <p id="card-text" class="card-text">eu volutpat odio facilisis mauris sit amet massa vitae tortor
+                condimentum lacinia quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue
+                lacus viverra vitae congue eu consequat ac felis donec et odio pellentesque diam volutpat commodo sed
+                egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec
+                sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim
+                sodales
+                ut eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed
+                risus ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus metus</p>
+            </div>
+          </div>
+        </a>
+
+
+        <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+          <div id="article-dummy" class="card shadow-sm">
+            <img src="https://cinemags.co.id/wp-content/uploads/2020/12/The-Falcon-and-the-Winter-Soldier.jpg"
+              class="card-img-top" alt="">
+            <div class="card-body">
+              <p id="card-title" class="card-title">The Falcon and the Winter Soldier</p>
+              <p id="card-text" class="card-text">eu volutpat odio facilisis mauris sit amet massa vitae tortor
+                condimentum lacinia quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue
+                lacus viverra vitae congue eu consequat ac felis donec et odio pellentesque diam volutpat commodo sed
+                egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec
+                sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim
+                sodales
+                ut eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed
+                risus ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus metus</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- copyan article dummy-->
+
       </div>
-      <div id="top-article-box" class="col-4">
+      <div class="col-4">
         <div class="card">
-          <div class="card-body">
+          <div id="top-article-box" class="card-body">
             <h1 class="top-article-text">Top Article</h1>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
-            <p>The Falcon and the Winter Soldier</p>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
+            <a href="#read-article-clicked" style="text-decoration: none; color: rgb(33, 37, 41)">
+              <p>The Falcon and the Winter Soldier</p>
+            </a>
           </div>
         </div>
       </div>
     </div>
     </div>
   </section>
+
+  <!-- PAGINATION SECTION -->
+  <nav aria-label="">
+    <ul id="pagination-ul" class="pagination pagination">
+      <li id="pagination-li" class="page-item active" aria-current="page">
+        <span class="page-link">1</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#page2">2</a></li>
+      <li class="page-item"><a class="page-link" href="#page3">3</a></li>
+    </ul>
+  </nav>
+
+  <script src="../js/homepage.js"></script>
 </body>
 
 </html>

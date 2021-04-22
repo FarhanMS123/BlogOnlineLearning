@@ -23,7 +23,7 @@ confirm_password.onkeyup = validatePassword;
         form.addEventListener('submit', function (event) {
           if (!form.checkValidity()) {
             event.preventDefault()
-            event.stopPropagation()
+            // event.stopPropagation()
           }
   
           form.classList.add('was-validated')
