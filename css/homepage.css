@@ -18,7 +18,7 @@ body {
 }
 
 /* .navbar {
-    
+  display: flex !important;
 } */
 
 .navbar-brand {
@@ -79,6 +79,36 @@ body {
   transition-duration: 0.7s;
   cursor: pointer;
 } */
+
+
+/* LOGIN REGIST */
+
+.login-register{
+  margin: 1em 4em 1em 1em;
+}
+
+.login, .register{
+  margin: 1em;
+  text-decoration: none;
+  color: black;
+  background: none;
+}
+
+.login:hover, .register:hover{
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: rgb(127, 255, 224);
+}
+
+.after-login1{
+  display: none;
+  text-decoration: none;
+}
+
+.after-login2{
+  display: flex;
+  align-items: center;
+}
 
 .dropdown-menu[data-bs-popper] {
   left: 1.25em !important;
@@ -237,4 +267,41 @@ body {
   color: black !important;
   background-color: white !important;
   border-color: black !important;
+}
+
+.login-submit-button{
+  border-radius: 5px;
+  border-color: black;
+  border-width: 1px;
+  width: 4em;
+  height: 2em;
+}
+
+#login-submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#remember-me, #remember-me-text{
+  cursor: pointer !important;
+}
+
+#register-content{
+  max-width:calc(100% - 2em);
+  width: 50em;
+}
+
+.register-submit-button{
+  border-radius: 5px;
+  border-color: black;
+  border-width: 1px;
+  width: 4em;
+  height: 2em;
+}
+
+#register-submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
