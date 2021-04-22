@@ -1,61 +1,107 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Technoscape
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+This readme is created to describe Vasa Doctrina and how to setting it up. For laravel license, please see [this link](./laravel.md).
 
-## About Laravel
+## Entity Relationship Diagram
+> There is nothing to see here.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Set-up
+There is no specific configuration.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Any configuration can be found in [Laravel Installation](https://laravel.com/docs/7.x/installation) and [Laravel Configuration](https://laravel.com/docs/7.x/configuration). 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Testing (Dev Environment)
+```
+# /.env
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://localhost
+```
 
-## Learning Laravel
+```bash
+> composer install
+> npm install
+> npm run dev
+> composer dump-autoload
+> php artisan migrate
+> php artisan storage:link
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Installation (Prod Environment)
+```
+# /.env
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=http://localhost # change to production DNS
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+> composer install
+> npm install
+> npm run prod
+> composer dump-autoload
+> php artisan migrate
+> php artisan storage:link
+```
 
-## Laravel Sponsors
+## Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Middleware - Admin Access
+```php
+App\Http\Middleware\AdminChecks::class
+```
 
-### Premium Partners
+This middleware is purposed to restrict access to admin dashboard. To apply this middleware, just set
+`auth` and `admin` as middleware.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+Setting as group in `web.php`
+```php
 
-## Contributing
+Route::middleware(['auth', 'admin'])->group(function(){
+    // ...
+});
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
 
-## Code of Conduct
+`admin` wouldn't check if user is authenticated, so `auth` also need to be set before `admin`. If a user is not admin, he will would directed to their dashboard which mentioned in `App\Providers\RouteServiceProvider::HOME`.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Need to Check
+> There is nothing to see here.
 
-## Security Vulnerabilities
+## Notes
+- Query used in index page. All query listed can be combined.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+GET /?search=[title|body]
+GET /?by=[username]
+GET /?sort_by=[asc|desc]
+GET /?date_start=[interval]
+GET /?date_end=[interval]
+```
 
-## License
+## TODO
+- [ ] make admin middleware.
+- [ ] make index function.
+- [ ] make post function.
+- [ ] make edit post function.
+- [ ] make show profile function.
+- [ ] make edit profile function.
+- [ ] integrate FE to BE.
+- [ ] testing.
+- [ ] cleaning.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Suspended
+> There is nothing to see here.
+
+### Next Up
+> there is nothing to see here...
+
+> remove all tasks above while everything has done, wants to continue to next tasks, or would be merged to the master routes and serve in production. Remember to move routes from `debug` middleware to the main routes.
+
+## Security Issue
+- Please restrict access to this root in production mode.
+- Because of password exposed in `.env` for mailing, use `no-reply` account to minimize the risk.
+- To secure user identity, file below uploaded could be secured.
+
+## References
+- Recaptcha Implementation: https://www.lab-informatika.com/implementasi-google-recaptcha-pada-laravel
