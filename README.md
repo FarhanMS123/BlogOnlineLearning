@@ -1,4 +1,4 @@
-# Technoscape
+# Vasa Doctrina
 
 This readme is created to describe Vasa Doctrina and how to setting it up. For laravel license, please see [this link](./laravel.md).
 
