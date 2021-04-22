@@ -48,6 +48,12 @@ APP_URL=http://localhost # change to production DNS
 > php artisan storage:link
 ```
 
+Use this script below if composer become anoying.
+
+```bash
+composer install --ignore-platform-reqs
+```
+
 ## Features
 
 ### Middleware - Admin Access
