@@ -19,7 +19,19 @@ class IndexController extends Controller
     }
 
     public function makePost(Request $request){
-        //
+        $request->validate([
+            'title'=> $request["title"],
+            'preview'=> $request["preview"],
+            'body'=>$request["body"]
+        ]);
+
+        $request->user()->posts->create([
+            'title'=> $request["title"],
+            'preview'=> $request["preview"],
+            'body'=>$request["body"]
+        ]);
+
+        return back();
     }
 
     public function editPost(Request $request){
@@ -27,6 +39,16 @@ class IndexController extends Controller
     }
 
     public function uploadPhoto(Request $request){
-        //
+        $request->validate([
+            "image"=>["required", "image"]
+        ]);
+
+        $img = $request->file('image')->store('images');
+
+        $request->user()->images->create([
+            "image"=>$img
+        ]);
+
+        return back();
     }
 }
