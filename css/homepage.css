@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap%27");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "roboto";
+  font-family: 'Roboto';
 }
 
 html,
@@ -110,6 +112,7 @@ body {
 
 .post-text {
   color: #c3c6ca;
+  font-weight: normal;
 }
 
 #article-dummy {
@@ -159,7 +162,7 @@ body {
   display: none;
 }
 
-#top-article-box{
+#top-article-box {
   text-align: center;
 }
 
@@ -213,4 +216,25 @@ body {
   color: rgba(0, 0, 0, 1);
   transition-duration: 0.7s;
   cursor: pointer;
+}
+
+#pagination-ul {
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+.page-item.active .page-link {
+  color: black !important;
+  background-color: rgb(127, 255, 224) !important;
+  border-color: black !important;
+}
+
+.page-item .page-link {
+  color: black !important;
+}
+
+.page-item .page-link:hover {
+  color: black !important;
+  background-color: white !important;
+  border-color: black !important;
 }
