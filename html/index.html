@@ -48,11 +48,10 @@
           <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div id="login-content" class="modal-dialog">
               <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" id="login-title">
                   <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="login-punya">
                   <form class="change-form needs-validation" novalidate>
                     <div class="mb-2">
                       <label for="recipient-name" class="col-form-label">Username</label>
@@ -64,15 +63,15 @@
                       <input class="form-control" id="login-password" type="password" minlength="5"
                         placeholder="Password" required>
                     </div>
-                    <div class="mb-2">
+                    <div class="rem mb-2">
                       <input type="checkbox" name="" id="remember-me">
                       <label id="remember-me-text" for="remember-me">Remember Me</label>
                     </div>
-                  </form>
                 </div>
                 <div id="login-submit" class="modal-footer">
                   <button class="login-submit-button" type="submit">Login</button>
                 </div>
+              </form>
               </div>
             </div>
           </div>
@@ -83,53 +82,67 @@
             aria-hidden="true">
             <div id="register-content" class="modal-dialog">
               <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" id="register-title">
                   <h5 class="modal-title" id="exampleModalLabel">Register</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="regis-punya">
                   <form class="change-form needs-validation w-100" novalidate>
                     <div class="row w-100">
                       <div class="col-6">
                         <div class="mb-2">
                           <label for="recipient-name" class="col-form-label">Username</label>
                           <input class="form-control w-100" id="login-username" type="text" minlength="5"
-                            placeholder="Username" required>
+                            placeholder="Your Username" required>
                         </div>
                         <div class="mb-2">
                           <label for="recipient-name" class="col-form-label">Email</label>
                           <input class="form-control w-100" id="login-username" type="text" minlength="5"
-                            placeholder="Username" required>
+                            placeholder="Your e-mail" required>
                         </div>
                         <div class="mb-2">
                           <label for="recipient-name" class="col-form-label">Place of Birth</label>
                           <input class="form-control w-100" id="login-username" type="text" minlength="5"
-                            placeholder="Username" required>
+                            placeholder="Where?" required>
                         </div>
                         <div class="mb-2">
                           <label for="recipient-name" class="col-form-label">Date of Birth</label>
-                          <input class="form-control w-100" id="login-username" type="text" minlength="5"
-                            placeholder="Username" required>
+                          <input class="form-control w-100" id="login-username" type="date" minlength="5"
+                            placeholder="Your birthday" required>
                         </div>
                       </div>
                       <div class="col-6">
                         <div class="mb-2">
                           <label for="message-text" class="col-form-label">Password</label>
-                          <input class="form-control w-100" id="login-password" type="password" minlength="5"
+                          <input class="form-control w-100" id="regis-password" type="password" minlength="5"
                             placeholder="Password" required>
                         </div>
                         <div class="mb-2">
                           <label for="message-text" class="col-form-label">Confirm Password</label>
-                          <input class="form-control w-100" id="login-password" type="password" minlength="5"
-                            placeholder="Password" required>
+                          <input class="form-control w-100" id="regis-cpassword" type="password" minlength="5"
+                            placeholder="Confirm your password" required>
+                        </div>
+                        <div class="mb-2">
+                          <label for="message-text" class="col-form-label">Gender</label>
+                          <br>
+                          <div class="input-radio">
+                            <input name="gender" id="male-gender" type="radio" required>
+                            <label for="male-gender">Male</label>
+                            <input name="gender" class="radio-gender" id="female-gender" type="radio" required>
+                            <label for="female-gender">Female</label>
+                            <input name="gender" class="radio-gender" id="other-gender" type="radio" required>
+                            <label for="other-gender">Other</label>
+                          </div>
+                        </div>
+                        <div class="recaptcha mb-2">
+                          <label for="">For Recaptcha</label>
                         </div>
                       </div>
                     </div>
-                  </form>
                 </div>
                 <div id="register-submit" class="modal-footer">
                   <button class="register-submit-button" type="submit">Register</button>
                 </div>
+              </form>
               </div>
             </div>
           </div>

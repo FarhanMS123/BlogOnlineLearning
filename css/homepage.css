@@ -269,6 +269,29 @@ body {
   border-color: black !important;
 }
 
+#login-punya{
+  margin-left: 1.7em;
+}
+
+#regis-punya{
+  margin-left: 1em;
+}
+
+#register-title, #login-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-title{
+  font-weight: lighter;
+  font-size: 50px;
+}
+
+.rem{
+  margin-top: 1em;
+}
+
 .login-submit-button{
   border-radius: 5px;
   border-color: black;
@@ -292,12 +315,48 @@ body {
   width: 50em;
 }
 
+.radio-gender{
+  margin-left: 1em;
+}
+
+.input-radio input, .input-radio label{
+  cursor: pointer;
+}
+
+.recaptcha{
+  margin-top: 1em;
+  background-color: red;
+  color: white;
+  width: 21.9em;
+  height: 5em;
+  text-align: center;
+  padding-top: 1.8em;
+}
+
 .register-submit-button{
+  background-color: rgba(127, 255, 224, 1);
   border-radius: 5px;
-  border-color: black;
+  border: none;
   border-width: 1px;
-  width: 4em;
-  height: 2em;
+  width: 15em;
+  height: 3em;
+}
+
+.register-submit-button:hover{
+  background-color: rgb(114, 228, 199);
+}
+
+.login-submit-button{
+  background-color: rgba(127, 255, 224, 1);
+  border-radius: 5px;
+  border: none;
+  border-width: 1px;
+  width: 12em;
+  height: 3em;
+}
+
+.login-submit-button:hover{
+  background-color: rgb(114, 228, 199);
 }
 
 #register-submit{
