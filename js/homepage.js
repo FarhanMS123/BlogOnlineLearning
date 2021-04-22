@@ -24,6 +24,20 @@
 //       $("#popup-register").show();
 //     });
 
+var password = document.getElementById("regis-password"), confirm_password = document.getElementById("regis-cpassword");
+
+function validatePassword(){
+  console.log([30, password.value, confirm_password.value])
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Wrong");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
 (function () {
     'use strict'
 
