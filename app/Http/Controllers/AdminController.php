@@ -15,4 +15,8 @@ class AdminController extends Controller
             "file"=>[""]
         ]);
     }
+
+    public function deletePost(Request $request){
+        //
+    }
 }

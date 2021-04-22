@@ -26,7 +26,7 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function editUser(Request $request){
+    public function editProfile(Request $request){
         //
     }
 }
