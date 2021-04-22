@@ -1,13 +1,15 @@
-function checkPass(){
-  $('#validationCustom01, #validationCustompass').on('keyup', function () {
-    if ($('#validationCustom01').val() == $('#validationCustompass').val()) {
-      $('#validationCustompass').addClass('is-valid');
-      return 0;
-    } else 
-      $('#validationCustompass').addClass('is-invalid');
-      return 1;
-  });
+var password = document.getElementById("validationPass"), confirm_password = document.getElementById("validationConPass");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Wrong");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
 }
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
 
 (function () {
     'use strict'
@@ -19,7 +21,7 @@ function checkPass(){
     Array.prototype.slice.call(forms)
       .forEach(function (form) {
         form.addEventListener('submit', function (event) {
-          if (!form.checkValidity() && checkPass() != 0) {
+          if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
           }
