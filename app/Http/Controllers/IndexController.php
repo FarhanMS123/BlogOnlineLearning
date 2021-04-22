@@ -18,11 +18,15 @@ class IndexController extends Controller
         $posts = Post::all();
     }
 
+    public function showPost(Request $request){
+        $posts = Post::findOrDie($request["id"]);
+    }
+
     public function makePost(Request $request){
         $request->validate([
-            'title'=> $request["title"],
-            'preview'=> $request["preview"],
-            'body'=>$request["body"]
+            'title'=> ["required", "string", "min:1"],
+            'preview'=> ["required", "string", "min:1"],
+            'body'=> ["required", "string", "min:1"]
         ]);
 
         $request->user()->posts->create([
@@ -35,7 +39,23 @@ class IndexController extends Controller
     }
 
     public function editPost(Request $request){
-        //
+        $request->validate([
+            "id"=> ["required"],
+            'title'=> ["optional", "string", "min:1"],
+            'preview'=> ["optional", "string", "min:1"],
+            'body'=> ["optional", "string", "min:1"]
+        ]);
+
+        $post = Post::findOrDie($request["id"]);
+
+        if($post["user_id"] != $request->user()["id"]) return back()->withErrors([ "post"=>"You are not allowed to edit this post." ]);
+
+        if($request["title"]) $post["title"] = $request["title"];
+        if($request["preview"]) $post["preview"] = $request["preview"];
+        if($request["body"]) $post["body"] = $request["body"];
+        $post->save();
+
+        return back();
     }
 
     public function uploadPhoto(Request $request){
