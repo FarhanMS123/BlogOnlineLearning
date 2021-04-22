@@ -27,7 +27,7 @@ body{
 
 .imagebox{
     background-color: #C4C4C4;
-    border-radius: 70px;
+    border-radius: 100%;
     width: 8.8em;
     height: 8.8em;
     text-align: center;
